@@ -13,10 +13,10 @@ import PaymentPage from "./Pages/PaymentPage";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<HomePage />}></Route>
+      <Route path="/home" element={<HomePage />}></Route>
       <Route path="/design/:id" element={<DesignPage />}></Route>
       <Route path="/payment/:id" element={<PaymentPage />}></Route>
-      <Route path="/login" element={<LoginPage />}></Route>
+      <Route path="/" element={<LoginPage />}></Route>
     </Routes>
   );
 }

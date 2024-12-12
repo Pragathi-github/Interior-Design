@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { BiChevronDown, BiMenu, BiSearch } from "react-icons/bi";
 import { Link, useNavigate } from "react-router-dom";
+
 function NavSm() {
   return (
     <>
@@ -58,6 +59,10 @@ function NavMd() {
 function NavLg() {
   const [input, setInput] = useState("");
   const navigate = useNavigate();
+  const handleNavigate = () => {
+    // Navigate to the login page
+    navigate("/");
+  };
   return (
     <>
       <div className="container flex mx-auto px-4 items-center justify-between">
@@ -96,7 +101,10 @@ function NavLg() {
             Bangalore NCR
             <BiChevronDown />
           </span>
-          <button className="bg-red-600 text-white px-2 py-1 text-sm rounded">
+          <button
+            className="bg-red-600 text-white px-2 py-1 text-sm rounded"
+            onClick={handleNavigate}
+          >
             Sign in
           </button>
           <div className="w-8 h-8 text-white">
